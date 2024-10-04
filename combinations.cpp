@@ -12,7 +12,7 @@ int main() {
     
         Algorithm
 
-        Iterate over the range [0, 9]
+        Iterate over the range [0, max_num]
         Take target which is equal to one of the variables
         Iterate over the range again in the inner loop
         Match inner loop values with one of the variables except
