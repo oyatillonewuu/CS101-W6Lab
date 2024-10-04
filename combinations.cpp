@@ -24,9 +24,45 @@ int main() {
 
     */
 
+
+    // Max Value
+    int max_num;
+
+    if (a >= b && a >= c && a >= d && a >= e && a >= f && a >= g && a >= h && a >= i && a >= j10) {
+        max_num = a;
+    }
+    else if (b >= a && b >= c && b >= d && b >= e && b >= f && b >= g && b >= h && b >= i && b >= j10) {
+        max_num = b;
+    }
+    else if (c >= a && c >= b && c >= d && c >= e && c >= f && c >= g && c >= h && c >= i && c >= j10) {
+        max_num = c;
+    }
+    else if (d >= b && d >= c && d >= a && d >= e && d >= f && d >= g && d >= h && d >= i && d >= j10) {
+        max_num = d;
+    }
+    else if (e >= b && e >= c && e >= d && e >= a && e >= f && e >= g && e >= h && e >= i && e >= j10) {
+        max_num = e;
+    }
+    else if (f >= b && f >= c && f >= d && f >= e && f >= a && f >= g && f >= h && f >= i && f >= j10) {
+        max_num = f;
+    }
+    else if (g >= b && g >= c && g >= d && g >= e && g >= f && g >= a && g >= h && g >= i && g >= j10) {
+        max_num = g;   
+    }
+    else if (h >= b && h >= c && h >= d && h >= e && h >= f && h >= g && h >= a && h >= i && h >= j10) {
+        max_num = h;   
+    }
+    else if (i >= b && i >= c && i >= d && i >= e && i >= f && i >= g && i >= h && i >= a && i >= j10) {
+        max_num = i;
+        
+    }
+    else if (j10 >= b && j10 >= c && j10 >= d && j10 >= e && j10 >= f && j10 >= g && j10 >= h && j10 >= a && j10 >= i) {
+        max_num = j10;        
+    }
+
     int count = 0;
 
-    for (int lfd = 1; lfd <= 9; lfd++) {
+    for (int lfd = 1; lfd <= max_num + 1; lfd++) {
 
         int target = 0;
 
@@ -64,9 +100,7 @@ int main() {
             continue; // if no match with the variables, skip this iteraton
         }
 
-        int combination = target * 10;
-
-        for (int lsd = 0; lsd < 10; lsd++) {
+        for (int lsd = 0; lsd <= max_num + 1; lsd++) {
             if (target == lsd) {
                 continue; // prevent duplicates so that
             }
@@ -77,7 +111,7 @@ int main() {
             else if (lsd == a || lsd == b || lsd == c 
             || lsd == d || lsd == e || lsd == f 
             || lsd == g || lsd == h || lsd == i || lsd == j10) {
-                cout << combination + lsd << endl;
+                cout << target << " : " << lsd << endl;
                 count ++;
             }
         }
